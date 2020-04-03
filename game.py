@@ -16,5 +16,9 @@ pygame.display.flip()
 count=0
 
 while True:
-    print("Slither.eat-Snake game!")
-    pass
+    for event in pygame.event.get():
+        print(event)
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+    pygame.display.update() 
